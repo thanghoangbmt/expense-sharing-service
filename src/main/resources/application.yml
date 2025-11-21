@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://ep-sweet-cherry-a1334rr3-pooler.ap-southeast-1.aws.neon.tech:5432/expense_sharing
+    username: neondb_owner
+    password: npg_iw2V5xSmpEAN
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+server:
+  port: 8080
