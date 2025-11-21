@@ -3,7 +3,8 @@ spring:
     url: jdbc:postgresql://ep-sweet-cherry-a1334rr3-pooler.ap-southeast-1.aws.neon.tech:5432/expense_sharing
     username: neondb_owner
     password: npg_iw2V5xSmpEAN
-    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 5
   jpa:
     hibernate:
       ddl-auto: update
@@ -11,6 +12,7 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
   jackson:
     serialization:
       INDENT_OUTPUT: true
